@@ -3,7 +3,7 @@
 
 **Rebase :**
 
-`sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/startingpoint:latest`
+`sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/mimios-perso-prox`
 
 # Starting point
 
