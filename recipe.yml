@@ -84,9 +84,6 @@ rpm:
     - lm_sensors
     - powertop
     - rocm-smi
-    - wine-core
-    - wine-core.i686
-    - lutris
     - epiphany
 
   # These RPMs will be removed from the system image. This step happens during
