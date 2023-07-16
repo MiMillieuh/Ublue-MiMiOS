@@ -65,7 +65,6 @@ rpm:
     # if you ever download or compile any custom software on your machine.
     - libadwaita
     # Codecs
-    - gstreamer1-plugin-openh264
     - gstreamer-plugins-espeak
     - lame
     # Add your own below:
