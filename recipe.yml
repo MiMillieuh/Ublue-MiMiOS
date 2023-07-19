@@ -78,6 +78,7 @@ rpm:
     - gnome-themes-extra
     - gtk-murrine-engine
     - neofetch
+    - ibus-typing-booster
     # - wine-devel
     # - wine-common
     # - nvidia-exec
