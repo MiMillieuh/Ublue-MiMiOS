@@ -1,3 +1,10 @@
+# MiMiOS
+**THIS ISN'T INTENDED FOR ANYONE TO USE IT, IT'S A PERSONAL REPO USED FOR MY NEEDS. USE IT AT YOUR RISK**
+
+**Rebase :**
+
+`sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/mimillieuh/mimios-perso-prox:latest`
+
 # Starting point
 
 [![build-ublue](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml)

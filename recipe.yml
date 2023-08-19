@@ -1,20 +1,20 @@
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: startingpoint
+name: mimios-perso-prox
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/silverblue-nvidia
 
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
 # Fedora version, assuming the image you're using as your base container
 # builds with the tag (all uBlue images do this).
-fedora-version: 38
+fedora-version: latest
 
 # This description will be visible in the container metadata.
-description: A starting point for further customization of uBlue images. Make your own! https://universal-blue.org/tinker/make-your-own/
+description: Ublue personal os for my laptop
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
@@ -48,6 +48,9 @@ rpm:
   repos:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
+    # - https://raw.githubusercontent.com/MiMillieuh/NotRPM-Repo/main/notrpm.repo
+    # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%FEDORA_VERSION%//bieszczaders-kernel-cachyos-fedora-%FEDORA_VERSION%.repo
+    # - https://dl.winehq.org/wine-builds/fedora/%FEDORA_VERSION%/winehq.repo
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
@@ -61,16 +64,35 @@ rpm:
     # apps and binaries require it, so it's a good idea to always include it
     # if you ever download or compile any custom software on your machine.
     - libadwaita
+    # Codecs
+    - gstreamer-plugins-espeak
+    - lame
     # Add your own below:
     # Example:
     # - tilix
-
+    - firefox
+    - kernel-tools
+    - langpacks-fr
+    - mesa-libGLU
+    - alsa-plugins-pulseaudio
+    - gnome-themes-extra
+    - gtk-murrine-engine
+    - neofetch
+    - ibus-typing-booster
+    # - wine-devel
+    # - wine-common
+    # - nvidia-exec
+    # - kernel-cachyos-bore
+    - tlp
+    # - waydroid
+    - lm_sensors
+    - powertop
+    - rocm-smi
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
-    - firefox
-    - firefox-langpacks
+    mesa-va-drivers
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
@@ -89,3 +111,46 @@ firstboot:
   flatpaks:
     - io.github.celluloid_player.Celluloid
     - org.kde.krita
+    - org.gnome.Calendar
+    - org.gnome.Weather
+    - org.gnome.Firmware
+    - com.mattjakeman.ExtensionManager
+    - ca.desrt.dconf-editor
+    - com.anydesk.Anydesk
+    - com.authy.Authy
+    - com.discordapp.Discord
+    - com.github.IsmaelMartinez.teams_for_linux
+    - com.mastermindzh.tidal-hifi
+    - com.mattjakeman.ExtensionManager
+    - com.nextcloud.desktopclient.nextcloud
+    - com.rtosta.zapzap
+    - com.usebottles.bottles
+    - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+    - com.valvesoftware.Steam.Utility.gamescopel
+    - com.visualstudio.code
+    - net.cozic.joplin_desktop
+    - net.lutris.Lutris
+    - org.audacityteam.Audacity
+    - org.audacityteam.Audacity.Codecs
+    - org.chromium.Chromium
+    - org.chromium.Chromium.Codecs
+    - org.filezillaproject.Filezilla
+    - org.gimp.GIMP
+    - org.gimp.GIMP.Plugin.FocusBlur
+    - org.gimp.GIMP.Plugin.Fourier
+    - org.gimp.GIMP.Plugin.GMic
+    - org.gimp.GIMP.Plugin.Lensfun
+    - org.gimp.GIMP.Plugin.LiquidRescale
+    - org.gimp.GIMP.Plugin.Resynthesizer
+    - org.gnome.Evince
+    - org.gnome.TextEditor
+    - org.gnome.Totem
+    - org.gnome.Totem.Codecs
+    - org.gnome.Totem.Videosite.YouTubeDl
+    - org.gnome.eog
+    - org.onlyoffice.desktopeditors
+    - org.prismlauncher.PrismLauncher
+    - org.qbittorrent.qBittorrent
+    - org.remmina.Remmina
+    - org.gimp.GIMP.Plugin.Resynthesizer
+    - org.gimp.GIMP.Plugin.Resynthesizer
