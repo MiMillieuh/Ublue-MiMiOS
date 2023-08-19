@@ -14,7 +14,7 @@ base-image: ghcr.io/ublue-os/silverblue-nvidia
 fedora-version: latest
 
 # This description will be visible in the container metadata.
-description: Ublue personal os for my lenovo yoga slim 7 pro x
+description: Ublue personal os for my laptop
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
