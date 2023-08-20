@@ -52,6 +52,7 @@ rpm:
     # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%FEDORA_VERSION%//bieszczaders-kernel-cachyos-fedora-%FEDORA_VERSION%.repo
     # - https://dl.winehq.org/wine-builds/fedora/%FEDORA_VERSION%/winehq.repo
       - https://copr.fedorainfracloud.org/coprs/kallepm/tuxedo-control-center/repo/fedora-%FEDORA_VERSION%/kallepm-tuxedo-control-center-fedora-%FEDORA_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/kallepm/tuxedo-keyboard/repo/fedora-%FEDORA_VERSION%/kallepm-tuxedo-keyboard-fedora-%FEDORA_VERSION%.repo
     
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
