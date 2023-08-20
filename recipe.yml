@@ -51,6 +51,7 @@ rpm:
     # - https://raw.githubusercontent.com/MiMillieuh/NotRPM-Repo/main/notrpm.repo
     # - https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-%FEDORA_VERSION%//bieszczaders-kernel-cachyos-fedora-%FEDORA_VERSION%.repo
     # - https://dl.winehq.org/wine-builds/fedora/%FEDORA_VERSION%/winehq.repo
+      - https://dl.google.com/linux/chrome/rpm/stable/x86_64
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
@@ -89,6 +90,8 @@ rpm:
     - vkBasalt
     - goverlay
     - mangohud
+    - google-chrome-stable
+    - chromium
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
