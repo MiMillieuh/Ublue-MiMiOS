@@ -10,4 +10,4 @@ wget https://github.com/MiMillieuh/Ublue-MiMiOS/raw/live/modules/acpi_call.ko
 
 mv acpi_call.ko /usr/lib/modules/6.4.11-200.fc38.x86_64/extra/acpi_call/
 
-depmod -a
+depmod ${KERNEL}
