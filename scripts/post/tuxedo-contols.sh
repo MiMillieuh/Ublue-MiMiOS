@@ -12,6 +12,8 @@ git checkout release
 
 sed -i 's/\$(shell uname -r)/${KERNEL}/g' path_to_Makefile
 sed -i 's/\${kernelver}/${KERNEL}/g' path_to_dkms.conf
+sed -i 's/dkms install -m $(MODULE_NAME) -v $(VER)/& --kernelsourcedir=\/usr\/src\/kernels\/${KERNEL}/' path_to_Makefile
+
 
 make clean && make
 
