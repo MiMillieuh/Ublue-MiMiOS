@@ -11,7 +11,7 @@ cd tuxedo-keyboard
 git checkout release
 
 sed -i 's|MAKE\[0\]="make KDIR=/lib/modules/${kernelver}/build"|MAKE[0]="make KDIR=/lib/modules/${KERNEL}/build"|' dkms.conf
-sed -i 's|dkms install -m \$(MODULE_NAME) -v \$(VER)|dkms install -m --kernelsourcedir=/lib/modules/${KERNEL}/source \$(MODULE_NAME) -v \$(VER)|' Makefile
+sed -i 's|dkms install -m \$(MODULE_NAME) -v \$(VER)|dkms install -m --kernelsourcedir=/usr/src/kernels/${KERNEL} \$(MODULE_NAME) -v \$(VER)|' Makefile
 
 make clean && make
 
