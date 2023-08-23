@@ -92,6 +92,7 @@ rpm:
     - mangohud
     - dkms
     - kernel-devel
+    - libappindicator
     # - https://getlemonade.org/notrpm/acpi_call-1.2.2-1.x86_64.rpm
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
