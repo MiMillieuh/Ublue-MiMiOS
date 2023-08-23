@@ -10,6 +10,8 @@ cd tuxedo-keyboard
 
 git checkout release
 
+sed -i 's|MAKE\[0\]="make KDIR=/lib/modules/${kernelver}/build"|MAKE[0]="make KDIR=/lib/modules/${KERNEL}/build"|' dkms.conf
+
 make clean && make
 
 make clean
