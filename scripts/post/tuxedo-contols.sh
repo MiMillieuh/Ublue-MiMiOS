@@ -24,4 +24,3 @@ sudo make dkmsinstall KDIR=/lib/modules/${KERNEL}/build
 
 cd ..
 rm -rf tuxedo-keyboard
-rpm -ivh https://github.com/MiMillieuh/tongfang-laptop-linux-guide/releases/download/ok/tuxedo-control-center-2.0.8-1.x86_64.rpm
