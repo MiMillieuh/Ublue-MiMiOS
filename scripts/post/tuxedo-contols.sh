@@ -24,3 +24,11 @@ sudo make dkmsinstall KDIR=/lib/modules/${KERNEL}/build
 
 cd ..
 rm -rf tuxedo-keyboard
+
+mkdir 
+
+mv /lib/modules/${KERNEL}/extra/uniwill_wmi.ko.xz /lib/modules/${KERNEL}/extra/tuxedo_keyboard
+mv /lib/modules/${KERNEL}/extra/clevo_acpi.ko.xz /lib/modules/${KERNEL}/extra/tuxedo_keyboard
+mv /lib/modules/${KERNEL}/extra/tuxedo_io.ko.xz /lib/modules/${KERNEL}/extra/tuxedo_keyboard
+mv /lib/modules/${KERNEL}/extra/clevo_wmi.ko.xz /lib/modules/${KERNEL}/extra/tuxedo_keyboard
+mv /lib/modules/${KERNEL}/extra/tuxedo_keyboard.ko.xz /lib/modules/${KERNEL}/extra/tuxedo_keyboard
