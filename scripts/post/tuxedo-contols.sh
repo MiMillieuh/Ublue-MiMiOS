@@ -12,7 +12,9 @@ git checkout release
 
 sed -i "s/\$(shell uname -r)/${KERNEL}/g" Makefile
 sed -i "s/\${kernelver}/${KERNEL}/g" dkms.conf
-sed -i "s/dkms install -m \$(MODULE_NAME) -v \$(VER)/& --kernelsourcedir=\/usr\/src\/kernels\/${KERNEL}/" Makefile
+#sed -i "s/dkms install -m \$(MODULE_NAME) -v \$(VER)/& --kernelsourcedir=\/usr\/src\/kernels\/${KERNEL}/" Makefile
+sed -i "s/dkms install -m \$(MODULE_NAME) -v \$(VER)/& -k ${KERNEL}/" Makefile
+
 
 make clean && make
 
