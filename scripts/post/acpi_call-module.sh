@@ -5,13 +5,11 @@ ARCH=$(rpm -E '%_arch')
 KERNEL=$(rpm -q kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')
 RELEASE=$(rpm -E '%fedora')
 
-# Décompressez le fichier acpi_call-master.zip
-wget https://github.com/nix-community/acpi_call/archive/refs/heads/master.zip
+# Cloner le dépôt
+git clone https://github.com/nix-community/acpi_call.git /tmp/acpi_call
 
-unzip acpi_call-master.zip -d /tmp
-
-# Aller dans le répertoire décompressé
-cd acpi_call-master
+# Aller dans le répertoire cloné
+cd /tmp/acpi_call
 
 # Compiler le module pour le noyau cible
 make -C /usr/src/kernels/${KERNEL} M=$(pwd) modules
@@ -28,4 +26,3 @@ mv acpi_call.ko /usr/lib/modules/${KERNEL}/extra/acpi_call/
 
 # Afficher un message de confirmation
 echo "Le module acpi_call a été compilé et déplacé avec succès pour le noyau ${KERNEL}."
-
