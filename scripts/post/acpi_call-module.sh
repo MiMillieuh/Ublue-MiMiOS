@@ -24,5 +24,9 @@ fi
 mkdir -p /usr/lib/modules/${KERNEL}/extra/acpi_call/
 mv acpi_call.ko /usr/lib/modules/${KERNEL}/extra/acpi_call/
 
+
+# Mettre à jour les dépendances du module pour le noyau spécifié
+depmod -a ${KERNEL}
+
 # Afficher un message de confirmation
 echo "Le module acpi_call a été compilé et déplacé avec succès pour le noyau ${KERNEL}."
